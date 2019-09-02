@@ -10,6 +10,7 @@
 #determine a dependence or a command then don't provide it.)
 #Use tabs properly or makefile won't work.
 #Answer first page of quiz questions using your makefile.
+#
 
 makeNumber: makeNumber.o Number.o
 	g++ makeNumber.o Number.o -o makeNumber
