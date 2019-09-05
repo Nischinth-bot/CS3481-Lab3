@@ -13,13 +13,10 @@
 #
 
 makeNumber: makeNumber.o Number.o
-	g++ makeNumber.o Number.o -o makeNumber
 
 makeNumber.o: makeNumber.C Number.h
-	g++ -c makeNumber.C
 
 Number.o: Number.C Number.h
-	g++ -c Number.C
 
 clean:
 	rm -f *.o
