@@ -25,8 +25,8 @@ OBJ = Animal.o Dog.o
 .C.o:
 	$(CC) $(CFLAGS) $< -o $@
 makeAnimals:  $(OBJ)
-Animal.o: Animal.C Animal.h
-Dog.o: Dog.C Animal.h Dog.h
+Animal.o: Animal.h
+Dog.o: Animal.h Dog.h
 
 clean:
 	rm -f *.o
