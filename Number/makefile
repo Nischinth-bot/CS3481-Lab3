@@ -20,9 +20,9 @@ OBJ = makeNumber.o Number.o
 
 makeNumber: $(OBJ)
 
-makeNumber.o: makeNumber.C Number.h
+makeNumber.o: Number.h
 
-Number.o: Number.C Number.h
+Number.o: Number.h
 
 clean:
 	rm -f *.o
