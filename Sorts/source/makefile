@@ -23,12 +23,12 @@ OBJ = sortProg.o Sort.o List.o BubbleSort.o MergeSort.o QuickSort.o
 	$(CC) $(CFLAGS) $< -o $@
 
 sortProg: $(OBJ)
-SortProg.o: sortProg.C $(INC)/Sort.h $(INC)/BubbleSort.h $(INC)/QuickSort.h $(INC)/MergeSort.h $(INC)/List.h 
-Sort.o: Sort.C $(INC)/Sort.h
-List.o: List.C $(INC)/List.h
-BubbleSort.o: BubbleSort.C $(INC)/BubbleSort.h $(INC)/Sort.h
-MergeSort.o: MergeSort.C $(INC)/MergeSort.h $(INC)/Sort.h
-QuickSort.o: QuickSort.C $(INC)/QuickSort.h $(INC)/Sort.h
+SortProg.o: $(INC)/Sort.h $(INC)/BubbleSort.h $(INC)/QuickSort.h $(INC)/MergeSort.h $(INC)/List.h 
+Sort.o: $(INC)/Sort.h
+List.o: $(INC)/List.h
+BubbleSort.o: $(INC)/BubbleSort.h $(INC)/Sort.h
+MergeSort.o: $(INC)/MergeSort.h $(INC)/Sort.h
+QuickSort.o: $(INC)/QuickSort.h $(INC)/Sort.h
 
 install: 
 	make sortProg
