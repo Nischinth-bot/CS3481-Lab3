@@ -21,12 +21,13 @@
 
 CC = g++
 CFLAGS = -c -Wall -g -std=c++11
-OBJ = Animal.o Dog.o 
 .C.o:
 	$(CC) $(CFLAGS) $< -o $@
+OBJ = Animal.o Dog.o 
+
 makeAnimals:  $(OBJ)
+
 Animal.o: Animal.h
 Dog.o: Animal.h Dog.h
-
 clean:
 	rm -f *.o

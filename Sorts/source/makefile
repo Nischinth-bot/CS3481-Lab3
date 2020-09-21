@@ -31,7 +31,7 @@ MergeSort.o: $(INC)/MergeSort.h $(INC)/Sort.h
 QuickSort.o: $(INC)/QuickSort.h $(INC)/Sort.h
 
 install: 
-	make sortProg
+	make
 	mv sortProg ../bin 
 
 clean:
